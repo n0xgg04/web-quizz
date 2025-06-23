@@ -72,12 +72,29 @@ export default function Home() {
   ];
 
   const handleTopicChange = (topicId: string, checked: boolean) => {
-    setSettings((prev) => ({
-      ...prev,
-      topics: checked
+    setSettings((prev) => {
+      const newTopics = checked
         ? [...prev.topics, topicId]
-        : prev.topics.filter((t) => t !== topicId),
-    }));
+        : prev.topics.filter((t) => t !== topicId);
+      let totalQuestions = 0;
+      for (const t of newTopics) {
+        const topic = topicOptions.find((x) => x.id === t);
+        if (topic) totalQuestions += topic.questions.length;
+      }
+      let newQuestionCount = prev.questionCount;
+      if (
+        typeof newQuestionCount === "number" &&
+        totalQuestions > 0 &&
+        newQuestionCount > totalQuestions
+      ) {
+        newQuestionCount = undefined;
+      }
+      return {
+        ...prev,
+        topics: newTopics,
+        questionCount: newQuestionCount,
+      };
+    });
   };
 
   const startQuiz = () => {
@@ -119,7 +136,14 @@ export default function Home() {
       allQuestions = allQuestions.sort(() => Math.random() - 0.5);
     }
 
-    if (settings.mode === "exam" && settings.questionCount) {
+    const totalQuestions = allQuestions.length;
+    if (
+      settings.mode === "exam" &&
+      typeof settings.questionCount === "number" &&
+      !isNaN(settings.questionCount) &&
+      settings.questionCount > 0 &&
+      settings.questionCount < totalQuestions
+    ) {
       allQuestions = allQuestions.slice(0, settings.questionCount);
     }
 
@@ -266,11 +290,16 @@ export default function Home() {
                   <div className="space-y-2">
                     <Label htmlFor="questionCount">Số câu hỏi</Label>
                     <Select
-                      value={settings.questionCount?.toString() || "10"}
+                      value={
+                        settings.questionCount === undefined
+                          ? "all"
+                          : settings.questionCount.toString()
+                      }
                       onValueChange={(value) =>
                         setSettings((prev) => ({
                           ...prev,
-                          questionCount: parseInt(value),
+                          questionCount:
+                            value === "all" ? undefined : parseInt(value),
                         }))
                       }
                     >
@@ -283,6 +312,10 @@ export default function Home() {
                         <SelectItem value="15">15 câu</SelectItem>
                         <SelectItem value="20">20 câu</SelectItem>
                         <SelectItem value="30">30 câu</SelectItem>
+                        <SelectItem value="50">50 câu</SelectItem>
+                        <SelectItem value="100">100 câu</SelectItem>
+                        <SelectItem value="200">200 câu</SelectItem>
+                        <SelectItem value="all">Không giới hạn</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
