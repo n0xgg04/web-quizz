@@ -1,0 +1,243 @@
+[
+    {
+      "question": "Bootstrap 3 is mobile-first.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which class provides a responsive fixed width container?",
+      "option": [
+        ".container-fluid",
+        ".container",
+        ".container-fixed"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class provides a full width container, spanning the entire width of the viewport?",
+      "option": [
+        ".container-fluid",
+        ".container-fixed",
+        ".container"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "The Bootstrap grid system is based on how many columns?",
+      "option": [
+        "3",
+        "6",
+        "12",
+        "9"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class adds zebra-stripes to a table?",
+      "option": [
+        ".table-bordered",
+        ".table-striped",
+        ".even and .odd",
+        ".table-zebra"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class shapes an image to a circle?",
+      "option": [
+        ".img-round",
+        ".img-circle",
+        ".img-thumbnail",
+        ".img-rounded"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class is used to create a big box for calling extra attention?",
+      "option": [
+        ".jumbotron",
+        ".bigbox",
+        ".container"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which button class is used to create a large button?",
+      "option": [
+        ".btn-lg",
+        ".btn-l",
+        ".btn-xl",
+        ".btn-large"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which class is used to create a button group?",
+      "option": [
+        ".button-group",
+        ".group-btn",
+        ".group-button",
+        ".btn-group"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "How can you insert a search icon?",
+      "option": [
+        "<span class=\"glyph glyph-search\"></span>",
+        "<span class=\"glyphicon glyphicon-search\"></span>",
+        "<span class=\"glyphicon search\"></span>",
+        "<span class=\"glyphicon-search\"></span>"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class is used to create a badge?",
+      "option": [
+        ".tag",
+        ".label",
+        ".badge",
+        ".flag"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class is used to create a basic pagination?",
+      "option": [
+        ".navigation",
+        ".page",
+        ".pages",
+        ".pagination"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which class is used to create a basic list group?",
+      "option": [
+        ".group-list",
+        ".grouped-list",
+        ".list-group"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class adds a heading to a panel?",
+      "option": [
+        ".panel-heading",
+        ".panel-head",
+        ".panel-header",
+        ".panel-footer"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which class indicates a dropdown menu?",
+      "option": [
+        ".select",
+        ".dropdown",
+        ".dropdown-list"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A standard navigation tab is created with:",
+      "option": [
+        "<ul class=\"nav nav-tabs\">",
+        "<ul class=\"nav tabs\">",
+        "<ul class=\"nav nav-navbar\">",
+        "<ul class=\"navigation-tabs\">"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "A standard navigation bar is created with:",
+      "option": [
+        "<nav class=\"navigationbar navbar-default\">",
+        "<nav class=\"navbar default-navbar\">",
+        "<nav class=\"navbar navbar-default\">",
+        "<nav class=\"nav navbar\">"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class is used to create a black navigation bar?",
+      "option": [
+        ".navbar-black",
+        ".navbar-default",
+        ".navbar-inverse",
+        ".navbar-dark"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which plugin is used to cycle through elements, like a slideshow?",
+      "option": [
+        "Orbit",
+        "Slideshow",
+        "Carousel",
+        "Scrollspy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which plugin is used to create a modal window?",
+      "option": [
+        "Popup",
+        "Window",
+        "Dialog Box",
+        "Modal"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which plugin is used to create a tooltip?",
+      "option": [
+        "Modal",
+        "Dialog Box",
+        "Tooltip",
+        "Popup"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which contextual class indicates a succesful or positive action?",
+      "option": [
+        ".text-warning",
+        ".text-success",
+        ".text-info",
+        ".text-primary"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which contextual class indicates a dangerous or potentially negative action?",
+      "option": [
+        ".text-warning",
+        ".text-info",
+        ".text-danger",
+        ".text-primary"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class indicates uppercased text?",
+      "option": [
+        ".ucase",
+        ".uppercase",
+        ".text-capitalize",
+        ".text-uppercase"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "The Bootstrap grid system works across multiple devices.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    }
+  ]

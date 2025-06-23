@@ -1,0 +1,248 @@
+[
+    {
+      "question": "The .container class provides a full width container, spanning the entire width of the screen",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which class provides a responsive fixed width container?",
+      "option": [
+        ".container-fixed",
+        ".container-responsive",
+        ".container",
+        ".container-fluid"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which contextual class is used to create an orange text color?",
+      "option": [
+        ".txt-warning",
+        ".text-warning",
+        ".bg-warning",
+        ".txt-orange"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "The Bootstrap grid system is based on how many columns?",
+      "option": [
+        "12",
+        "9",
+        "3",
+        "6"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which class adds zebra-stripes to a table?",
+      "option": [
+        ".table-zebra",
+        ".table-bordered",
+        ".table-striped",
+        ".even and .odd"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class shapes an image to a circle?",
+      "option": [
+        ".img-round",
+        ".img-rounded",
+        ".img-circle",
+        ".rounded-circle"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which class is used to create a big box for calling extra attention?",
+      "option": [
+        ".container",
+        ".jumbotron",
+        ".bigbox",
+        "There is no such class"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which class is used to create a button group?",
+      "option": [
+        ".group-btn",
+        ".btn-group",
+        ".group-button",
+        ".button-group"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which button class is used to create a large button?",
+      "option": [
+        ".btn-l",
+        ".btn-lg",
+        ".btn-large",
+        ".btn-l2"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class is used to create a badge?",
+      "option": [
+        ".badge-item",
+        ".badge-label",
+        ".label-badge",
+        ".badge"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which class is used to create a loader?",
+      "option": [
+        ".spinner-loader",
+        ".spinner-border",
+        ".loader",
+        ".spinner"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class is used to create a basic pagination?",
+      "option": [
+        ".pagination",
+        ".page",
+        ".pages",
+        ".navigation"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which class is used to create a basic list group?",
+      "option": [
+        ".grouped-list",
+        ".list-group",
+        ".group-list"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class adds a heading to a card?",
+      "option": [
+        ".card-footer",
+        ".card-head",
+        ".card-header",
+        ".card-heading"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class indicates a dropdown menu?",
+      "option": [
+        ".dropdown-list",
+        ".dropdown",
+        ".select"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which class is used to create a vertical navigation bar?",
+      "option": [
+        ".navbar",
+        ".navbar navbar-vertical",
+        ".navbar-vertical",
+        ".navbar-inverse"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which component is used to cycle through elements, like a slideshow?",
+      "option": [
+        "Carousel",
+        "Slideshow",
+        "Scrollspy",
+        "Orbit"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which contextual class indicates a succesful or positive action?",
+      "option": [
+        ".bg-info",
+        ".bg-warning",
+        ".bg-primary",
+        ".bg-success"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which contextual class indicates a dangerous or potentially negative action?",
+      "option": [
+        ".bg-dark",
+        ".bg-primary",
+        ".bg-info",
+        ".bg-danger"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which class indicates uppercased text?",
+      "option": [
+        ".text-uppercase",
+        ".ucase",
+        ".uppercase",
+        ".text-capitalize"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which attribute is used to create a tooltip?",
+      "option": [
+        "data-bs-toggle=\"modal\"",
+        "data-bs-toggle=\"tooltip\"",
+        "data-bs-toggle=\"collapse\"",
+        "data-bs-toggle=\"popup\""
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A standard navigation tab is created with:",
+      "option": [
+        "<ul class=\"nav nav-navbar\">",
+        "<ul class=\"nav nav-tabs\">",
+        "<ul class=\"nav tabs\">",
+        "<ul class=\"navigation-tabs\">"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A standard navigation bar is created with:",
+      "option": [
+        "<nav class=\"nav navbar\">",
+        "<nav class=\"navigationbar navbar-default\">",
+        "<nav class=\"navbar navbar-expand-sm\">",
+        "<nav class=\"navbar navbar-default\">"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which class is used to style a close icon?",
+      "option": [
+        ".btn-x",
+        ".x",
+        ".close-icon",
+        ".btn-close"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which class can be used to float an element to the right of the page?",
+      "option": [
+        ".float-right",
+        ".float-r",
+        ".float-end",
+        ".float-start"
+      ],
+      "correct": 2
+    }
+  ]

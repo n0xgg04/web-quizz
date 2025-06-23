@@ -1,0 +1,227 @@
+[
+    {
+      "question": "What does XML stand for?",
+      "option": [
+        "X-Markup Language",
+        "Example Markup Language",
+        "eXtra Modern Link",
+        "eXtensible Markup Language"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "There is a way of describing XML data, how?",
+      "option": [
+        "XML uses a DTD to describe the data",
+        "XML uses XSL to describe data",
+        "XML uses a description node to describe data"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "XML's goal is to replace HTML",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the correct syntax of the declaration which defines the XML version?",
+      "option": [
+        "<xml version=\"1.0\" />",
+        "<?xml version=\"1.0\" />",
+        "<?xml version=\"1.0\"?>"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does DTD stand for?",
+      "option": [
+        "Direct Type Definition",
+        "Dynamic Type Definition",
+        "Document Type Definition",
+        "Do The Dance"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Is this a \"well formed\" XML document?\n\n<?xml version=\"1.0\"?>\n<note>\n<to>Tove</to>\n<from>Jani</from>\n<heading>Reminder</heading>\n<body>Don't forget me this weekend!</body>\n</note>",
+      "option": [
+        "No",
+        "Yes"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Is this a \"well formed\" XML document?\n\n<?xml version=\"1.0\"?>\n<to>Tove</to>\n<from>Jani</from>\n<heading>Reminder</heading>\n<body>Don't forget me this weekend!</body>",
+      "option": [
+        "No",
+        "Yes"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which statement is true?",
+      "option": [
+        "All XML elements must be lower case",
+        "All XML elements must be properly closed",
+        "All XML documents must have a DTD",
+        "All the statements are true"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which statement is NOT true?",
+      "option": [
+        "White-space is not preserved in XML",
+        "XML tags are case sensitive",
+        "XML elements must be properly nested",
+        "XML documents must have a root tag"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "XML preserves white spaces",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Is this a \"well formed\" XML document?\n\n<?xml version=\"1.0\"?>\n<note>\n<to age=\"29\">Tove</to>\n<from>Jani</from>\n</note>",
+      "option": [
+        "Yes",
+        "No"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Is this a \"well formed\" XML document?\n\n<?xml version=\"1.0\"?>\n<note>\n<to age=29>Tove</to>\n<from>Jani</from>\n</note>",
+      "option": [
+        "No",
+        "Yes"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "XML elements cannot be empty",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which is not a correct name for an XML element?",
+      "option": [
+        "<h1>",
+        "All 3 names are incorrect",
+        "<Note>",
+        "<1dollar>"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which is not a correct name for an XML element?",
+      "option": [
+        "All 3 names are incorrect",
+        "<NAME>",
+        "<age>",
+        "<first name>"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which is a correct name for an XML element?",
+      "option": [
+        "<Name>",
+        "<7eleven>",
+        "<phone number>",
+        "<xmldocument>"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "XML attribute values must always be enclosed in quotes",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does XSL stand for?",
+      "option": [
+        "eXtensible Stylesheet Language",
+        "eXtensible Style Listing",
+        "eXpandable Style Language",
+        "eXtra Style Language"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a correct way of referring to a stylesheet called \"mystyle.xsl\" ?",
+      "option": [
+        "<stylesheet type=\"text/xsl\" href=\"mystyle.xsl\" />",
+        "<link type=\"text/xsl\" href=\"mystyle.xsl\" />",
+        "<?xml-stylesheet type=\"text/xsl\" href=\"mystyle.xsl\" ?>"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "For the XML parser to ignore a certain section of your XML document, which syntax is correct?",
+      "option": [
+        "<xml:CDATA[ Text to be ignored ]>",
+        "<![CDATA[ Text to be ignored ]]>",
+        "<CDATA> Text to be ignored </CDATA>",
+        "<PCDATA> Text to be ignored </PCDATA>"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which statement is true?",
+      "option": [
+        "Attributes must occur in defined order",
+        "None of the other two statements are true",
+        "Attributes must always be present"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are XML entities used for?",
+      "option": [
+        "Entities define shortcuts to standard elements",
+        "Entities define shortcuts to standard text or special characters",
+        "Entities define shortcuts to standard attributes"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following XML fragments is well-formed?",
+      "option": [
+        "<customer id=3456><name>John Smith</name></customer>",
+        "<customer id=\"3456\"><address/><zip code=\"3456\"/></customer>"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is an XML instance?",
+      "option": [
+        "An XML element",
+        "An XML attribute",
+        "An XML document"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which XML DOM object represents a node in the node tree?",
+      "option": [
+        "The nodeList object",
+        "The document object",
+        "The node object"
+      ],
+      "correct": 2
+    }
+  ]

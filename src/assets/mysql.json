@@ -1,0 +1,237 @@
+[
+    {
+      "question": "What is MySQL?",
+      "option": [
+        "A relational database management system",
+        "Developed, distributed, and supported by Oracle Corporation",
+        "All the options are correct",
+        "Cross-platform, open-source and free"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which MySQL statement is used to select data from a database?",
+      "option": [
+        "SELECT",
+        "GET",
+        "EXTRACT",
+        "OPEN"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which MySQL statement is used to update data in a database?",
+      "option": [
+        "UPDATE",
+        "INSERT",
+        "MODIFY",
+        "SAVE"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which MySQL statement is used to delete data from a database?",
+      "option": [
+        "DELETE",
+        "REMOVE",
+        "COLLAPSE"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which MYSQL statement is used to insert new data in a database?",
+      "option": [
+        "INSERT NEW",
+        "ADD RECORD",
+        "INSERT INTO",
+        "ADD NEW"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "With MySQL, how do you select a column named \"FirstName\" from a table named \"Persons\"?",
+      "option": [
+        "EXTRACT FirstName FROM Persons",
+        "SELECT Persons.FirstName",
+        "SELECT FirstName FROM Persons"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "With MySQL, how do you select all the columns from a table named \"Persons\"?",
+      "option": [
+        "SELECT *.Persons",
+        "SELECT * FROM Persons",
+        "SELECT [all] FROM Persons",
+        "SELECT Persons"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "With MySQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" is \"Peter\"?",
+      "option": [
+        "SELECT * FROM Persons WHERE FirstName<>'Peter'",
+        "SELECT * FROM Persons WHERE FirstName='Peter'",
+        "SELECT [all] FROM Persons WHERE FirstName LIKE 'Peter'",
+        "SELECT [all] FROM Persons WHERE FirstName='Peter'"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "With MySQL, how do you select all the records from a table named \"Persons\" where the value of the column \"FirstName\" starts with an \"a\"?",
+      "option": [
+        "SELECT * FROM Persons WHERE FirstName LIKE '%a'",
+        "SELECT * FROM Persons WHERE FirstName='%a%'",
+        "SELECT * FROM Persons WHERE FirstName='a'",
+        "SELECT * FROM Persons WHERE FirstName LIKE 'a%'"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "With MySQL, how do you select all the records from a table named \"Persons\" where the \"FirstName\" is \"Peter\" and the \"LastName\" is \"Jackson\"?",
+      "option": [
+        "SELECT * FROM Persons WHERE FirstName='Peter' AND LastName='Jackson'",
+        "SELECT * FROM Persons WHERE FirstName<>'Peter' AND LastName<>'Jackson'",
+        "SELECT FirstName='Peter', LastName='Jackson' FROM Persons"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "With MySQL, how do you select all the records from a table named \"Persons\" where the \"LastName\" is alphabetically between (and including) \"Hansen\" and \"Pettersen\"?",
+      "option": [
+        "SELECT LastName>'Hansen' AND LastName<'Pettersen' FROM Persons",
+        "SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'",
+        "SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName<'Pettersen'"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which MySQL statement is used to return only different values?",
+      "option": [
+        "SELECT DIFFERENT",
+        "SELECT DISTINCT",
+        "SELECT UNIQUE"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which MySQL keyword is used to sort the result-set?",
+      "option": [
+        "SORT",
+        "SORT BY",
+        "ORDER BY",
+        "ORDER"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "With MySQL, how can you return all the records from a table named \"Persons\" sorted descending by \"FirstName\"?",
+      "option": [
+        "SELECT * FROM Persons SORT BY 'FirstName' DESC",
+        "SELECT * FROM Persons SORT 'FirstName' DESC",
+        "SELECT * FROM Persons ORDER FirstName DESC",
+        "SELECT * FROM Persons ORDER BY FirstName DESC"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "With MySQL, how can you insert a new record into the \"Persons\" table?",
+      "option": [
+        "INSERT INTO Persons VALUES ('Jimmy', 'Jackson')",
+        "INSERT VALUES ('Jimmy', 'Jackson') INTO Persons",
+        "INSERT ('Jimmy', 'Jackson') INTO Persons"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "With MySQL, how can you insert \"Olsen\" as the \"LastName\" in the \"Persons\" table?",
+      "option": [
+        "INSERT INTO Persons (LastName) VALUES ('Olsen')",
+        "INSERT INTO Persons ('Olsen') INTO LastName",
+        "INSERT ('Olsen') INTO Persons (LastName)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How can you change \"Hansen\" into \"Nilsen\" in the \"LastName\" column in the Persons table?",
+      "option": [
+        "UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen'",
+        "MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen",
+        "UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen'",
+        "MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen'"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "With MySQL, how can you delete the records where the \"FirstName\" is \"Peter\" in the Persons Table?",
+      "option": [
+        "DELETE ROW FirstName='Peter' FROM Persons",
+        "DELETE FROM Persons WHERE FirstName = 'Peter'",
+        "DELETE FirstName='Peter' FROM Persons"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "With MySQL, how can you return the number of records in the \"Persons\" table?",
+      "option": [
+        "SELECT LEN(*) FROM Persons",
+        "SELECT NO(*) FROM Persons",
+        "SELECT COUNT(*) FROM Persons",
+        "SELECT COLUMNS(*) FROM Persons"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What are the supported types of joins in MySQL?",
+      "option": [
+        "INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN",
+        "INNER JOIN, OUTER JOIN, LEFT JOIN, RIGHT JOIN"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which operator is used to select values within a given range?",
+      "option": [
+        "UNION",
+        "BETWEEN",
+        "IN",
+        "RANGE"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "The NOT NULL constraint enforces a column to not accept NULL values.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which operator is used to search for a specified pattern in a column?",
+      "option": [
+        "GET",
+        "LIKE",
+        "FROM"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which MySQL statement is used to create a database table called 'Customers'?",
+      "option": [
+        "CREATE TABLE Customers",
+        "CREATE DATABASE TABLE Customers",
+        "CREATE DB Customers",
+        "CREATE DATABASE TAB Customers"
+      ],
+      "correct": 0
+    }
+  ]

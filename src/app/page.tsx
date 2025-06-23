@@ -19,8 +19,18 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { analytics } from "@/utils/firebase";
+import { logEvent } from "firebase/analytics";
 import htmlQuestions from "@/assets/html.json";
 import cssQuestions from "@/assets/css.json";
+import jsQuestions from "@/assets/js.json";
+import phpQuestions from "@/assets/php.json";
+import mysqlQuestions from "@/assets/mysql.json";
+import jqueryQuestions from "@/assets/jquery.json";
+import bootstrapQuestions from "@/assets/bootstrap.json";
+import bootstrap4Questions from "@/assets/bootstrap4.json";
+import bootstrap5Questions from "@/assets/bootstap5.json";
+import xmlQuestions from "@/assets/xml.json";
 
 interface Question {
   question: string;
@@ -51,6 +61,14 @@ export default function Home() {
   const topicOptions = [
     { id: "html", label: "HTML", questions: htmlQuestions },
     { id: "css", label: "CSS", questions: cssQuestions },
+    { id: "js", label: "JavaScript", questions: jsQuestions },
+    { id: "php", label: "PHP", questions: phpQuestions },
+    { id: "mysql", label: "MySQL", questions: mysqlQuestions },
+    { id: "jquery", label: "jQuery", questions: jqueryQuestions },
+    { id: "bootstrap", label: "Bootstrap 3", questions: bootstrapQuestions },
+    { id: "bootstrap4", label: "Bootstrap 4", questions: bootstrap4Questions },
+    { id: "bootstrap5", label: "Bootstrap 5", questions: bootstrap5Questions },
+    { id: "xml", label: "XML", questions: xmlQuestions },
   ];
 
   const handleTopicChange = (topicId: string, checked: boolean) => {
@@ -64,6 +82,22 @@ export default function Home() {
 
   const startQuiz = () => {
     if (settings.topics.length === 0) return;
+
+    if (analytics) {
+      const eventParams = {
+        topics: settings.topics.join(", "),
+        shuffle: String(settings.shuffle),
+      };
+
+      if (settings.mode === "practice") {
+        logEvent(analytics, "practice_quiz_started", eventParams);
+      } else if (settings.mode === "exam") {
+        logEvent(analytics, "exam_quiz_started", {
+          ...eventParams,
+          question_count: settings.questionCount,
+        });
+      }
+    }
 
     let allQuestions: Question[] = [];
 
@@ -159,7 +193,7 @@ export default function Home() {
                   Chọn một hoặc nhiều chủ đề để kiểm tra
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 max-h-96 overflow-y-auto">
                 {topicOptions.map((topic) => (
                   <div key={topic.id} className="flex items-center space-x-2">
                     <Checkbox
@@ -373,7 +407,6 @@ export default function Home() {
 
     if (settings.mode === "exam") {
       const answeredCount = selectedAnswers.filter((a) => a !== -1).length;
-      const isAllAnswered = !selectedAnswers.includes(-1);
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
@@ -440,6 +473,11 @@ export default function Home() {
                               {isCorrect ? "✓ Đúng" : "✗ Sai"}
                             </span>
                           )}
+                          {showAnswers && !isAnswered && (
+                            <span className="text-sm text-gray-500 font-medium">
+                              Chưa trả lời
+                            </span>
+                          )}
                         </div>
                         <p className="text-lg">{question.question}</p>
                       </div>
@@ -481,17 +519,29 @@ export default function Home() {
 
                       {showAnswers && (
                         <div className="mt-4 p-4 rounded-lg bg-gray-100">
-                          <div
-                            className={`font-semibold ${
-                              isCorrect ? "text-green-600" : "text-red-600"
-                            }`}
-                          >
-                            {isCorrect ? "✓ Đúng!" : "✗ Sai!"}
-                          </div>
-                          <div className="mt-2">
-                            <strong>Đáp án đúng:</strong>{" "}
-                            {question.option[question.correct]}
-                          </div>
+                          {isAnswered ? (
+                            <>
+                              <div
+                                className={`font-semibold ${
+                                  isCorrect ? "text-green-600" : "text-red-600"
+                                }`}
+                              >
+                                {isCorrect ? "✓ Đúng!" : "✗ Sai!"}
+                              </div>
+                              <div className="mt-2">
+                                <strong>Đáp án đúng:</strong>{" "}
+                                {question.option[question.correct]}
+                              </div>
+                            </>
+                          ) : (
+                            <div className="text-gray-600">
+                              <strong>Bạn chưa trả lời câu này</strong>
+                              <div className="mt-2">
+                                <strong>Đáp án đúng:</strong>{" "}
+                                {question.option[question.correct]}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       )}
                     </CardContent>
@@ -505,7 +555,6 @@ export default function Home() {
                 <Button
                   size="lg"
                   onClick={submitQuiz}
-                  disabled={!isAllAnswered}
                   className="px-8 py-3 text-lg"
                 >
                   Nộp bài
@@ -519,6 +568,14 @@ export default function Home() {
                   Làm bài mới
                 </Button>
               )}
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={resetQuiz}
+                className="px-8 py-3 text-lg"
+              >
+                Quay lại trang chủ
+              </Button>
             </div>
           </div>
         </div>

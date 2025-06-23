@@ -1,0 +1,234 @@
+[
+    {
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "option": [
+        "<js>",
+        "<scripting>",
+        "<javascript>",
+        "<script>"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the correct JavaScript syntax to change the content of the HTML element below?\n\n<p id=\"demo\">This is a demonstration.</p>",
+      "option": [
+        "document.getElement(\"p\").innerHTML = \"Hello World!\";",
+        "#demo.innerHTML = \"Hello World!\";",
+        "document.getElementByName(\"p\").innerHTML = \"Hello World!\";",
+        "document.getElementById(\"demo\").innerHTML = \"Hello World!\";"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Where is the correct place to insert a JavaScript?",
+      "option": [
+        "The <head> section",
+        "Both the <head> section and the <body> section are correct",
+        "The <body> section"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+      "option": [
+        "<script href=\"xxx.js\">",
+        "<script src=\"xxx.js\">",
+        "<script name=\"xxx.js\">"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "The external JavaScript file must contain the <script> tag.",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How do you write \"Hello World\" in an alert box?",
+      "option": [
+        "msg(\"Hello World\");",
+        "alertBox(\"Hello World\");",
+        "alert(\"Hello World\");",
+        "msgBox(\"Hello World\");"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How do you create a function in JavaScript?",
+      "option": [
+        "function:myFunction()",
+        "function myFunction()",
+        "function = myFunction()"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How do you call a function named \"myFunction\"?",
+      "option": [
+        "myFunction()",
+        "call myFunction()",
+        "call function myFunction()"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How to write an IF statement in JavaScript?",
+      "option": [
+        "if i = 5 then",
+        "if i == 5 then",
+        "if i = 5",
+        "if (i == 5)"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "How to write an IF statement for executing some code if \"i\" is NOT equal to 5?",
+      "option": [
+        "if (i <> 5)",
+        "if i <> 5",
+        "if (i != 5)",
+        "if i =! 5 then"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How does a WHILE loop start?",
+      "option": [
+        "while (i <= 10)",
+        "while (i <= 10; i++)",
+        "while i = 1 to 10"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How does a FOR loop start?",
+      "option": [
+        "for i = 1 to 5",
+        "for (i <= 5; i++)",
+        "for (i = 0; i <= 5; i++)",
+        "for (i = 0; i <= 5)"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How can you add a comment in a JavaScript?",
+      "option": [
+        "'This is a comment",
+        "<!--This is a comment-->",
+        "//This is a comment"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How to insert a comment that has more than one line?",
+      "option": [
+        "/*This comment has\nmore than one line*/",
+        "<!--This comment has\nmore than one line-->",
+        "//This comment has\nmore than one line//"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the correct way to write a JavaScript array?",
+      "option": [
+        "var colors = 1 = (\"red\"), 2 = (\"green\"), 3 = (\"blue\")",
+        "var colors = \"red\", \"green\", \"blue\"",
+        "var colors = [\"red\", \"green\", \"blue\"]",
+        "var colors = (1:\"red\", 2:\"green\", 3:\"blue\")"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How do you round the number 7.25, to the nearest integer?",
+      "option": [
+        "round(7.25)",
+        "Math.round(7.25)",
+        "rnd(7.25)",
+        "Math.rnd(7.25)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How do you find the number with the highest value of x and y?",
+      "option": [
+        "ceil(x, y)",
+        "Math.max(x, y)",
+        "Math.ceil(x, y)",
+        "top(x, y)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the correct JavaScript syntax for opening a new window called \"w2\" ?",
+      "option": [
+        "w2 = window.open(\"http://www.w3schools.com\");",
+        "w2 = window.new(\"http://www.w3schools.com\");"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "JavaScript is the same as Java.",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How can you detect the client's browser name?",
+      "option": [
+        "browser.name",
+        "navigator.appName",
+        "client.navName"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which event occurs when the user clicks on an HTML element?",
+      "option": [
+        "onchange",
+        "onmouseclick",
+        "onmouseover",
+        "onclick"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "How do you declare a JavaScript variable?",
+      "option": [
+        "v carName;",
+        "var carName;",
+        "variable carName;"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which operator is used to assign a value to a variable?",
+      "option": [
+        "x",
+        "=",
+        "*",
+        "-"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What will the following code return: Boolean(10 > 9)",
+      "option": [
+        "NaN",
+        "false",
+        "true"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Is JavaScript case-sensitive?",
+      "option": [
+        "No",
+        "Yes"
+      ],
+      "correct": 1
+    }
+  ]

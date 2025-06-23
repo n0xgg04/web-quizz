@@ -1,0 +1,227 @@
+[
+    {
+      "question": "What does PHP stand for?",
+      "option": [
+        "Private Home Page",
+        "PHP: Hypertext Preprocessor",
+        "Personal Hypertext Processor"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "PHP server scripts are surrounded by delimiters, which?",
+      "option": [
+        "<script>...</script>",
+        "<?php...?>",
+        "<?php>...</?>",
+        "<&>...</&>"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How do you write \"Hello World\" in PHP",
+      "option": [
+        "Document.Write(\"Hello World\");",
+        "\"Hello World\";",
+        "echo \"Hello World\";"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "All variables in PHP start with which symbol?",
+      "option": [
+        "!",
+        "&",
+        "$"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the correct way to end a PHP statement?",
+      "option": [
+        ".",
+        "New line",
+        "</php>",
+        ";"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "The PHP syntax is most similar to:",
+      "option": [
+        "JavaScript",
+        "Perl and C",
+        "VBScript"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How do you get information from a form that is submitted using the \"get\" method?",
+      "option": [
+        "$_GET[];",
+        "Request.QueryString;",
+        "Request.Form;"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "When using the POST method, variables are displayed in the URL:",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In PHP you can use both single quotes ( ' ' ) and double quotes ( \" \" ) for strings:",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Include files must have the file extension \".inc\"",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the correct way to include the file \"time.inc\" ?",
+      "option": [
+        "<?php include:\"time.inc\"; ?>",
+        "<?php include \"time.inc\"; ?>",
+        "<?php include file=\"time.inc\"; ?>",
+        "<!-- include file=\"time.inc\" -->"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the correct way to create a function in PHP?",
+      "option": [
+        "new_function myFunction()",
+        "function myFunction()",
+        "create myFunction()"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the correct way to open the file \"time.txt\" as readable?",
+      "option": [
+        "open(\"time.txt\");",
+        "fopen(\"time.txt\",\"r\");",
+        "open(\"time.txt\",\"read\");",
+        "fopen(\"time.txt\",\"r+\");"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "PHP allows you to send emails directly from a script",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which superglobal variable holds information about headers, paths, and script locations?",
+      "option": [
+        "$GLOBALS",
+        "$_SERVER",
+        "$_GET",
+        "$_SESSION"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the correct way to add 1 to the $count variable?",
+      "option": [
+        "count++;",
+        "++count",
+        "$count++;",
+        "$count =+1"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is a correct way to add a comment in PHP?",
+      "option": [
+        "<comment>...</comment>",
+        "<!--...-->",
+        "*\\...\\*",
+        "/*...*/"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "PHP can be run on Microsoft Windows IIS(Internet Information Server):",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "The die() and exit() functions do the exact same thing.",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which one of these variables has an illegal name?",
+      "option": [
+        "$my-Var",
+        "$my_Var",
+        "$myVar"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How do you create a cookie in PHP?",
+      "option": [
+        "makecookie()",
+        "setcookie()",
+        "createcookie"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In PHP, the only way to output text is with echo.",
+      "option": [
+        "False",
+        "True"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How do you create an array in PHP?",
+      "option": [
+        "$cars = array[\"Volvo\", \"BMW\", \"Toyota\"];",
+        "$cars = \"Volvo\", \"BMW\", \"Toyota\";",
+        "$cars = array(\"Volvo\", \"BMW\", \"Toyota\");"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "The if statement is used to execute some code only if a specified condition is true",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which operator is used to check if two values are equal and of same data type?",
+      "option": [
+        "===",
+        "!=",
+        "=",
+        "=="
+      ],
+      "correct": 0
+    }
+  ]

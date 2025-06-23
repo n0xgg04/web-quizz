@@ -1,0 +1,227 @@
+[
+    {
+      "question": "Which of the following is correct?",
+      "option": [
+        "jQuery is a JavaScript Library",
+        "jQuery is a JSON Library"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "jQuery uses CSS selectors to select elements?",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which sign does jQuery use as a shortcut for jQuery?",
+      "option": [
+        "the $ sign",
+        "the % sign",
+        "the ? Sign"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Look at the following selector: $(\"div\"). What does it select?",
+      "option": [
+        "All div elements",
+        "The first div element"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Is jQuery a library for client scripting or server scripting?",
+      "option": [
+        "Client scripting",
+        "Server scripting"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Is it possible to use jQuery together with AJAX?",
+      "option": [
+        "Yes",
+        "No"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "The jQuery html() method works for both HTML and XML documents",
+      "option": [
+        "True",
+        "False"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the correct jQuery code to set the background color of all p elements to red?",
+      "option": [
+        "$(\"p\").manipulate(\"background-color\",\"red\");",
+        "$(\"p\").css(\"background-color\",\"red\");",
+        "$(\"p\").style(\"background-color\",\"red\");",
+        "$(\"p\").layout(\"background-color\",\"red\");"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "With jQuery, look at the following selector: $(\"div.intro\"). What does it select?",
+      "option": [
+        "All div elements with id=\"intro\"",
+        "The first div element with id=\"intro\"",
+        "All div elements with class=\"intro\"",
+        "The first div element with class=\"intro\""
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which jQuery method is used to hide selected elements?",
+      "option": [
+        "display(none)",
+        "hide()",
+        "hidden()",
+        "visible(false)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which jQuery method is used to set one or more style properties for selected elements?",
+      "option": [
+        "html()",
+        "css()",
+        "style()"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which jQuery method is used to perform an asynchronous HTTP request?",
+      "option": [
+        "jQuery.ajaxSetup()",
+        "jQuery.ajaxAsync()",
+        "jQuery.ajax()"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the correct jQuery code for making all div elements 100 pixels high?",
+      "option": [
+        "$(\"div\").height(100)",
+        "$(\"div\").yPos(100)",
+        "$(\"div\").height=\"100\""
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which statement is true?",
+      "option": [
+        "To use jQuery, you do not have to do anything. Most browsers (Internet Explorer, Chrome, Firefox and Opera) have the jQuery library built in the browser",
+        "To use jQuery, you must buy the jQuery library at www.jquery.com",
+        "To use jQuery, you can refer to a hosted jQuery library at Google"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What scripting language is jQuery written in?",
+      "option": [
+        "VBScript",
+        "C#",
+        "JavaScript",
+        "C++"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which jQuery function is used to prevent code from running, before the document is finished loading?",
+      "option": [
+        "$(body).onload()",
+        "$(document).load()",
+        "$(document).ready()"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which jQuery method should be used to deal with name conflicts?",
+      "option": [
+        "noConflict()",
+        "noNameConflict()",
+        "nameConflict()",
+        "conflict()"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which jQuery method is used to switch between adding/removing one or more classes (for CSS) from selected elements?",
+      "option": [
+        "toggleClass()",
+        "switchClass()",
+        "altClass()",
+        "switch()"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Look at the following selector: $(\"div p\"). What does it select?",
+      "option": [
+        "The first p element inside a div element",
+        "All div elements with a p element",
+        "All p elements inside a div element"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Is jQuery a W3C standard?",
+      "option": [
+        "Yes",
+        "No"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Look at the following selector: $(\"p#intro\"). What does it select?",
+      "option": [
+        "The p element with id=\"intro\"",
+        "All p elements with class=\"intro\""
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which jQuery method is used to remove selected elements?",
+      "option": [
+        "remove()",
+        "detach()",
+        "Both methods can be used"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Look at the following selector: $(\":disabled\"). What does it select?",
+      "option": [
+        "All elements containing the text \"disabled\"",
+        "All elements that does not contain the text \"disabled\"",
+        "All disabled input elements",
+        "All hidden elements"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which jQuery method returns the direct parent element of the selected element?",
+      "option": [
+        "parents()",
+        "ancestor()",
+        "ancestors()",
+        "parent()"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "The jQuery animate() method can be used to animate ANY CSS property?",
+      "option": [
+        "Yes",
+        "Only properties containing numeric values",
+        "All properties except the shorthand properties"
+      ],
+      "correct": 1
+    }
+  ]
