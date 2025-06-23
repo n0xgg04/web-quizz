@@ -84,12 +84,12 @@ export default function Home() {
     if (settings.topics.length === 0) return;
 
     if (analytics) {
-      settings.topics.forEach((topicId) => {
+      for (const topicId of settings.topics) {
         logEvent(analytics, "select_content", {
           content_type: "quiz_topic",
           item_id: topicId,
         });
-      });
+      }
 
       const eventParams = {
         topics: settings.topics.join(", "),
