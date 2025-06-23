@@ -84,15 +84,22 @@ export default function Home() {
     if (settings.topics.length === 0) return;
 
     if (analytics) {
+      settings.topics.forEach((topicId) => {
+        logEvent(analytics, "select_content", {
+          content_type: "quiz_topic",
+          item_id: topicId,
+        });
+      });
+
       const eventParams = {
         topics: settings.topics.join(", "),
         shuffle: String(settings.shuffle),
       };
 
       if (settings.mode === "practice") {
-        logEvent(analytics, "practice_quiz_started", eventParams);
+        logEvent(analytics, "user_in_practice", eventParams);
       } else if (settings.mode === "exam") {
-        logEvent(analytics, "exam_quiz_started", {
+        logEvent(analytics, "user_in_test", {
           ...eventParams,
           question_count: settings.questionCount,
         });
@@ -159,9 +166,24 @@ export default function Home() {
     });
     setScore(correctCount);
     setShowAnswers(true);
+
+    if (analytics) {
+      logEvent(analytics, "user_done_test", {
+        score: correctCount,
+        total_questions: questions.length,
+        topics: settings.topics.join(", "),
+      });
+    }
   };
 
   const resetQuiz = () => {
+    if (currentStep === "quiz" && settings.mode === "practice" && analytics) {
+      logEvent(analytics, "user_done_practice", {
+        topics: settings.topics.join(", "),
+        questions_viewed: currentQuestionIndex + 1,
+      });
+    }
+
     setCurrentStep("setup");
     setSettings({
       topics: [],
