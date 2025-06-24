@@ -465,14 +465,14 @@ export default function Home() {
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto px-2 sm:px-4">
             <Card className="mb-6">
               <CardHeader>
                 <div className="flex justify-between items-center">
-                  <CardTitle className="text-2xl">
+                  <CardTitle className="text-xl sm:text-2xl">
                     Bài thi thử - {questions.length} câu hỏi
                   </CardTitle>
-                  <div className="text-lg">
+                  <div className="text-sm sm:text-lg">
                     <span className="font-semibold text-indigo-600">
                       Đã trả lời: {answeredCount}/{questions.length}
                     </span>
@@ -480,7 +480,7 @@ export default function Home() {
                 </div>
                 {score !== null && (
                   <div className="text-center mt-4">
-                    <div className="text-3xl font-bold text-indigo-600">
+                    <div className="text-2xl sm:text-3xl font-bold text-indigo-600">
                       Điểm: {score}/{questions.length} (
                       {Math.round((score / questions.length) * 100)}%)
                     </div>
@@ -510,8 +510,8 @@ export default function Home() {
                   >
                     <CardContent className="pt-6">
                       <div className="mb-4">
-                        <div className="flex items-center justify-between mb-3">
-                          <h3 className="text-lg font-semibold">
+                        <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                          <h3 className="text-base sm:text-lg font-semibold">
                             Câu {questionIndex + 1}
                           </h3>
                           {isAnswered && !showAnswers && (
@@ -534,7 +534,7 @@ export default function Home() {
                             </span>
                           )}
                         </div>
-                        <p className="text-lg">{question.question}</p>
+                        <p className="text-base sm:text-lg leading-relaxed">{question.question}</p>
                       </div>
 
                       <RadioGroup
@@ -555,7 +555,7 @@ export default function Home() {
                             />
                             <Label
                               htmlFor={`question-${questionIndex}-option-${optionIndex}`}
-                              className={`text-lg cursor-pointer ${
+                              className={`text-base sm:text-lg cursor-pointer leading-relaxed ${
                                 showAnswers && optionIndex === question.correct
                                   ? "text-green-600 font-bold"
                                   : showAnswers &&
@@ -605,12 +605,12 @@ export default function Home() {
               })}
             </div>
 
-            <div className="flex justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 px-4">
               {!showAnswers ? (
                 <Button
                   size="lg"
                   onClick={submitQuiz}
-                  className="px-8 py-3 text-lg"
+                  className="px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto"
                 >
                   Nộp bài
                 </Button>
@@ -618,7 +618,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   onClick={resetQuiz}
-                  className="px-8 py-3 text-lg"
+                  className="px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto"
                 >
                   Làm bài mới
                 </Button>
@@ -627,7 +627,7 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 onClick={resetQuiz}
-                className="px-8 py-3 text-lg"
+                className="px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto"
               >
                 Quay lại trang chủ
               </Button>
