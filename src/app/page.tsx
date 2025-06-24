@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -43,6 +43,7 @@ interface QuizSettings {
   shuffle: boolean;
   mode: "practice" | "exam";
   questionCount?: number;
+  timeLimit?: number; // in minutes
 }
 
 export default function Home() {
@@ -57,6 +58,80 @@ export default function Home() {
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
   const [showAnswers, setShowAnswers] = useState(false);
   const [score, setScore] = useState<number | null>(null);
+  const [timeRemaining, setTimeRemaining] = useState<number | null>(null); // in seconds
+  const [isTimerActive, setIsTimerActive] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Format time for display
+  const formatTime = (seconds: number): string => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
+
+  const submitQuiz = useCallback(() => {
+    // Clear timer when submitting
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    setIsTimerActive(false);
+
+    let correctCount = 0;
+    selectedAnswers.forEach((answer, index) => {
+      if (answer === questions[index].correct) {
+        correctCount++;
+      }
+    });
+    setScore(correctCount);
+    setShowAnswers(true);
+
+    if (analytics) {
+      logEvent(analytics, "user_done_test", {
+        score: correctCount,
+        total_questions: questions.length,
+        topics: settings.topics.join(", "),
+        time_used: settings.timeLimit ? settings.timeLimit * 60 - (timeRemaining || 0) : null,
+      });
+    }
+  }, [selectedAnswers, questions, settings.topics, settings.timeLimit, timeRemaining]);
+
+  // Timer effect
+  useEffect(() => {
+    if (isTimerActive && timeRemaining !== null && timeRemaining > 0) {
+      timerRef.current = setInterval(() => {
+        setTimeRemaining((prev) => {
+          if (prev === null || prev <= 1) {
+            // Time's up - auto submit
+            setIsTimerActive(false);
+            // Trigger auto-submit by setting a flag
+            setShowAnswers(true);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    } else {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, [isTimerActive, timeRemaining]);
+
+  // Handle auto-submit when timer expires
+  useEffect(() => {
+    if (timeRemaining === 0 && !isTimerActive && currentStep === "quiz" && settings.mode === "exam" && score === null) {
+      submitQuiz();
+    }
+  }, [timeRemaining, isTimerActive, currentStep, settings.mode, score, submitQuiz]);
 
   const topicOptions = [
     { id: "html", label: "HTML", questions: htmlQuestions },
@@ -152,6 +227,16 @@ export default function Home() {
     setCurrentQuestionIndex(0);
     setShowAnswers(false);
     setScore(null);
+    
+    // Initialize timer for exam mode
+    if (settings.mode === "exam" && settings.timeLimit) {
+      setTimeRemaining(settings.timeLimit * 60); // Convert minutes to seconds
+      setIsTimerActive(true);
+    } else {
+      setTimeRemaining(null);
+      setIsTimerActive(false);
+    }
+    
     setCurrentStep("quiz");
   };
 
@@ -181,26 +266,15 @@ export default function Home() {
     }
   };
 
-  const submitQuiz = () => {
-    let correctCount = 0;
-    selectedAnswers.forEach((answer, index) => {
-      if (answer === questions[index].correct) {
-        correctCount++;
-      }
-    });
-    setScore(correctCount);
-    setShowAnswers(true);
-
-    if (analytics) {
-      logEvent(analytics, "user_done_test", {
-        score: correctCount,
-        total_questions: questions.length,
-        topics: settings.topics.join(", "),
-      });
-    }
-  };
-
   const resetQuiz = () => {
+    // Clear timer when resetting
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    setIsTimerActive(false);
+    setTimeRemaining(null);
+
     if (currentStep === "quiz" && settings.mode === "practice" && analytics) {
       logEvent(analytics, "user_done_practice", {
         topics: settings.topics.join(", "),
@@ -316,6 +390,41 @@ export default function Home() {
                         <SelectItem value="100">100 câu</SelectItem>
                         <SelectItem value="200">200 câu</SelectItem>
                         <SelectItem value="all">Không giới hạn</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                )}
+
+                {settings.mode === "exam" && (
+                  <div className="space-y-2">
+                    <Label htmlFor="timeLimit">Thời gian làm bài (phút)</Label>
+                    <Select
+                      value={
+                        settings.timeLimit === undefined
+                          ? "unlimited"
+                          : settings.timeLimit.toString()
+                      }
+                      onValueChange={(value) =>
+                        setSettings((prev) => ({
+                          ...prev,
+                          timeLimit:
+                            value === "unlimited" ? undefined : parseInt(value),
+                        }))
+                      }
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="10">10 phút</SelectItem>
+                        <SelectItem value="15">15 phút</SelectItem>
+                        <SelectItem value="20">20 phút</SelectItem>
+                        <SelectItem value="30">30 phút</SelectItem>
+                        <SelectItem value="45">45 phút</SelectItem>
+                        <SelectItem value="60">60 phút</SelectItem>
+                        <SelectItem value="90">90 phút</SelectItem>
+                        <SelectItem value="120">120 phút</SelectItem>
+                        <SelectItem value="unlimited">Không giới hạn</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -472,10 +581,17 @@ export default function Home() {
                   <CardTitle className="text-2xl">
                     Bài thi thử - {questions.length} câu hỏi
                   </CardTitle>
-                  <div className="text-lg">
+                  <div className="flex flex-col sm:flex-row gap-4 text-lg">
                     <span className="font-semibold text-indigo-600">
                       Đã trả lời: {answeredCount}/{questions.length}
                     </span>
+                    {timeRemaining !== null && (
+                      <span className={`font-semibold ${
+                        timeRemaining <= 300 ? 'text-red-600' : 'text-green-600'
+                      }`}>
+                        Thời gian còn lại: {formatTime(timeRemaining)}
+                      </span>
+                    )}
                   </div>
                 </div>
                 {score !== null && (
